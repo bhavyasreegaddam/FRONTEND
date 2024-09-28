@@ -1,0 +1,511 @@
+/* General reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .logo{
+    margin-right:900px;
+    margin-top: 10px;
+  }
+
+  /* Navbar styling */
+  .menu {
+    width: 100%;
+    height: 80px;
+    background-color:white;
+    /* border:2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+  
+  nav .logo {
+    font-size:22px;
+    color: orange;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: rgb(71, 70, 70);
+    text-decoration: none;
+    font-size:18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Underline effect using ::after */
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2e2b2b; /* Color of the underline */
+    transition: width 0.3s ease;
+  }
+  
+  /* Hover effect for the underline */
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li a:hover {
+    color: #f1c40f; 
+  }
+  
+  /* Active link styling */
+  nav ul li a.active {
+    color: #f1c40f;
+  }
+  
+  /* Styling for the hamburger icon */
+  .checkbtn {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    nav ul {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.5s ease;
+    }
+  
+    nav ul li {
+      margin: 30px 0;
+    }
+  
+    .checkbtn {
+      display: block;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+  
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* border:2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height:600px;
+  }
+  
+  .content {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    color: #555;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .btn-order, .btn-menu {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-order {
+    background-color: #ff6347;
+    color: white;
+  }
+  
+  .btn-menu {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height:580px;
+  }
+  .content h1{
+    color: #ff6347;
+    font-size:60px;
+    margin-bottom: 10px;
+    /* margin-bottom:200px; */
+  }
+  .btn-menu{
+    margin-top:20px
+  }
+  .content p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap:10%;
+  }
+
+
+  .main-page {
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    margin-bottom: 40px;
+    margin-top:50px;
+  }
+  
+  .info-boxes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .info-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .highlighted {
+    background-color: #ff6347;
+    color: white;
+  }
+  
+  .info-box h3 {
+    margin-bottom: 10px;
+  }
+  
+  /* About Restaurant Section */
+  .about-restaurant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .image-container img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top:20px;
+    /* border:2px solid green; */
+  }
+  
+  .restaurant-info {
+    max-width: 600px;
+    margin-right:200px;
+    /* border:2px solid red; */
+
+  }
+  .restaurant-info h2{
+    margin-right:290px;
+    font-size: 30px;
+  }
+  .restaurant-info h3 {
+    font-size: 3rem;
+    color: #ff6347;
+    /* margin-left:50px; */
+  }
+  .restaurant-info p{
+    margin-top: 10px;
+  }
+  .explore-menu-btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top:50px;
+  }
+  
+  .explore-menu-btn:hover {
+    background-color: #e0523e;
+  }
+  .about-restaurant{
+    margin-top:20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  .app {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Menu Navigation */
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .menu button {
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .menu button:hover {
+    color: orange;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Product Card */
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .product-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+
+  .product-card p {
+    font-size: 18px;
+    color: #333;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .order-btn {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid orange;
+    color: orange;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .order-btn:hover {
+    background-color: orange;
+    color: white;
+  }
+  /* Reviews Section */
+.reviews-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #e0523e;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Flexbox container for reviews */
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image inside each review card */
+.review-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Text content inside each review */
+.review-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Star rating */
+.star-rating {
+  font-size: 20px;
+  color: gold;
+}
+/* Cart Notification */
+.cart-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid orange;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.cart-notification h4 {
+  margin-bottom: 10px;
+}
+
+.cart-notification ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-notification ul li {
+  margin-bottom: 5px;
+}
+
+/* General Grid Styles */
+.product-grid {
+  display: grid;
+}
+.footer img{
+  margin-top:50px;
+}
+/* Register.css */
+
+.register-container {
+  max-width: 400px; 
+  margin: 50px auto; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: #ffffff; 
+}
+
+h2 {
+  text-align: center; 
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+label {
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold;
+  color: #555; 
+}
+
+input {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none; 
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px; 
+  background-color: #007bff;
+  color: white; 
+  border: none;
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+p {
+  text-align: center; 
+  color: #007bff; 
+  margin-top: 10px; 
+}
+
+button {
+  margin-top: 10px; 
+  background-color: transparent;
+  border: none; 
+  color: #007bff; 
+  cursor: pointer; 
+}
+
+button:hover {
+  text-decoration: underline;
+}
